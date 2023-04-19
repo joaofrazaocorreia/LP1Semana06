@@ -6,7 +6,8 @@ namespace GameSix
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Console.Write("How many foes? ");
+            int foeCount = int.Parse(Console.ReadLine());
         }
     }
 }
