@@ -14,7 +14,7 @@ namespace GameSix
         /// Construtor
         public Foe(string name)
         {
-            this.name = name;
+            SetName(name);
             health = 100;
             shield = 0;
         }
