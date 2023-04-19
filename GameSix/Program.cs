@@ -8,6 +8,9 @@ namespace GameSix
         {
             Console.Write("How many foes? ");
             int foeCount = int.Parse(Console.ReadLine());
+
+            Foe[] myFoes = new Foe[foeCount];
+            
         }
     }
 }
