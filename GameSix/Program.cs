@@ -59,6 +59,9 @@ namespace GameSix
             Console.WriteLine("");
             Console.WriteLine($"Number of powerups used: "+
                               $"{Foe.GetPowerupAmount()}");
+
+            Console.WriteLine("");
+            Console.WriteLine("Merci d'utiliser ce programme!");
         }
     }
 }
