@@ -44,7 +44,7 @@ namespace GameSix
             Console.WriteLine("");
             Console.WriteLine($"Foe {myFoes[0].GetName()}'s stats:");
             Console.WriteLine($"{myFoes[0].GetHealth()} Health, "+
-                                $"{myFoes[0].GetShield()} Shield");
+                              $"{myFoes[0].GetShield()} Shield");
 
             Console.WriteLine("");
             Console.WriteLine($"Foe {myFoes[0].GetName()} heals 80 health!");
@@ -55,6 +55,10 @@ namespace GameSix
             Console.WriteLine($"{myFoes[0].GetHealth()} Health, "+
                                 $"{myFoes[0].GetShield()} Shield");
 
+            
+            Console.WriteLine("");
+            Console.WriteLine($"Number of powerups used: "+
+                              $"{Foe.GetPowerupAmount()}");
         }
     }
 }
