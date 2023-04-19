@@ -19,6 +19,7 @@ namespace GameSix
             SetName(name);
             health = 100;
             shield = 0;
+            powerupAmount = 0;
         }
 
         public string GetName()
