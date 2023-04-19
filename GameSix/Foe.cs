@@ -36,6 +36,11 @@ namespace GameSix
             return shield;
         }
 
+        public static int GetPowerupAmount()
+        {
+            return powerupAmount;
+        }
+
         public void SetName(string name)
         {
             this.name = name.Trim();
