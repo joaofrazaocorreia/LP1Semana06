@@ -11,6 +11,8 @@ namespace GameSix
         private float health;
         private float shield;
 
+        private static int powerupAmount;
+
         /// Construtor
         public Foe(string name)
         {
