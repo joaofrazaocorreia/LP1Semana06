@@ -61,6 +61,8 @@ namespace GameSix
 
         public void PickupPowerUp(PowerUp powerup, float amount)
         {
+            powerupAmount++;
+
             if (powerup == PowerUp.Health)
             {
                 health += amount;
