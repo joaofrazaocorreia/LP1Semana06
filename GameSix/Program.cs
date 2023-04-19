@@ -16,6 +16,11 @@ namespace GameSix
                 Console.Write($"Name of foe num. {i+1}:");
                 myFoes[i] = new Foe(Console.ReadLine());
             }
+
+            foreach (Foe f in myFoes)
+            {
+                Console.WriteLine(f.GetName());
+            }
         }
     }
 }
