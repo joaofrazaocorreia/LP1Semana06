@@ -34,6 +34,11 @@ namespace GameSix
             return shield;
         }
 
+        public void SetName(string name)
+        {
+            this.name = name.Trim();
+        }
+
         public void TakeDamage(float damage)
         {
             shield -= damage;
