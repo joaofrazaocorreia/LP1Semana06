@@ -2,67 +2,34 @@
 
 namespace GameSixFriday
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Console.Write("How many foes? ");
-            int foeCount = int.Parse(Console.ReadLine());
+            GameLevel gl = new GameLevel(15, Difficulty.Hard);
 
-            Foe[] myFoes = new Foe[foeCount];
+            gl.SetFoeInRoom(2, new Foe("Darth Vader"));
+            gl.SetFoeInRoom(5, new Foe("Borg Queen"));
+            gl.SetFoeInRoom(11, new Foe("Thanos"));
+            gl.SetFoeInRoom(12, new Foe("Xenomorph"));
 
-            for (int i = 0; i < foeCount; i++)
-            {
-                Console.Write($"Name of foe num. {i+1}: ");
-                myFoes[i] = new Foe(Console.ReadLine());
-            }
+            Console.WriteLine($"Difficulty: {gl.GetDifficulty()}");
 
-            Console.WriteLine("");
-            foreach (Foe f in myFoes)
-            {
-                Console.WriteLine(f.GetName());
-            }
+            Console.WriteLine($"Number of rooms: {gl.GetNumRooms()}");
 
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()}'s stats:");
-            Console.WriteLine($"{myFoes[0].GetHealth()} Health, "+
-                                $"{myFoes[0].GetShield()} Shield");
+            Console.WriteLine($"Number of foes: {gl.GetNumFoes()}");
 
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()} takes 50.5 damage!");
-            myFoes[0].TakeDamage(50.5f);
+            gl.PrintFoes();
 
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()}'s stats:");
-            Console.WriteLine($"{myFoes[0].GetHealth()} Health, "+
-                                $"{myFoes[0].GetShield()} Shield");
-
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()} gets 4.2 shield!");
-            myFoes[0].PickupPowerUp(PowerUp.Shield, 4.2f);
-
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()}'s stats:");
-            Console.WriteLine($"{myFoes[0].GetHealth()} Health, "+
-                              $"{myFoes[0].GetShield()} Shield");
-
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()} heals 80 health!");
-            myFoes[0].PickupPowerUp(PowerUp.Health, 80f);
-
-            Console.WriteLine("");
-            Console.WriteLine($"Foe {myFoes[0].GetName()}'s stats:");
-            Console.WriteLine($"{myFoes[0].GetHealth()} Health, "+
-                                $"{myFoes[0].GetShield()} Shield");
-
-            
-            Console.WriteLine("");
-            Console.WriteLine($"Number of powerups used: "+
-                              $"{Foe.GetPowerupAmount()}");
-
-            Console.WriteLine("");
-            Console.WriteLine("Thank you for using this program!");
-
+            // Este programa mostra o seguinte no ecrã:
+            //
+            // Difficulty: Hard
+            // Number of rooms: 15
+            // Number of foes: 4
+            // Room 2: Darth Vader
+            // Room 5: Borg Queen
+            // Room 11: Thanos
+            // Room 12: Xenomorph
         }
     }
 }
