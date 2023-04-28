@@ -6,9 +6,9 @@ namespace GameSixFriday
     {
         private static void Main()
         {
-            GameLevel gl = new GameLevel(15, Difficulty.Hard);
+            GameLevel gl = new GameLevel(15, Difficulty.Easy);
 
-            gl.SetFoeInRoom(2, new Foe("Darth Vader"));
+            gl.SetFoeInRoom(0, new Foe("Darth Vader"));
             gl.SetFoeInRoom(5, new Foe("Borg Queen"));
             gl.SetFoeInRoom(11, new Foe("Thanos"));
             gl.SetFoeInRoom(12, new Foe("Xenomorph"));

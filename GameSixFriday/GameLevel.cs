@@ -18,7 +18,7 @@ namespace GameSixFriday
 
         public void SetFoeInRoom(int room, Foe foe)
         {
-            roomFoes[room-1] = foe;
+            roomFoes[room] = foe;
         }
 
         public Difficulty GetDifficulty()
@@ -41,7 +41,7 @@ namespace GameSixFriday
             for (int i = 0; i < roomFoes.Length; i++)
             {
                 if (roomFoes[i] != null)
-                    Console.WriteLine($"Room {i + 1}: {roomFoes[i].GetName()}");
+                    Console.WriteLine($"Room {i}: {roomFoes[i].GetName()}");
             }
         }
     }
